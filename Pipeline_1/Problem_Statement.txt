@@ -1,0 +1,25 @@
+The assignment is to create 2 pipelines, one with automated scrapping based on ticker in instructions, second one based on static input .
+* Create pipeline with Airflow
+
+
+
+* Pipelines:
+    * Pipeline 1:
+                * Data Sources: (search for only two keywords: HDFC, Tata Motors, fetch 5 latest articles for each ticker)
+    * Data Source1: https://yourstory.com
+
+                    * Data Source2: https://finshots.in/
+
+
+
+              * schedule: 7pm every working day
+
+              * Steps:
+
+                             * Fetch data (text data of article) from Data Source1, Data Source2
+
+                             * Do basic cleaning and processing (prepping/deduplication on title/text data for that ticker) on the data
+
+                             * Generate sentiment score for the company (assume a mock/dummy API which can be called for it with input as news text and response as float between 0 to 1)
+
+                             * Persist final score in some DB, Data Lake or anything of your choice, and anything else you may consider necessary (with justification)
